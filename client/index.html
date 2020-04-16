@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Chat con socket.io y Node</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <style>
+        .msj-container{
+            height: 60vh;
+            overflow-y:auto;
+            overflow-x: hidden;
+        }
+       #form{
+        height: 30vh;
+       }
+        #nickemiter,#messaje-emit,#mensajes{
+            transition:ease-in-out 0.4s;
+        }
+    </style>
+   <base href="/">
+</head>
+<body>
+    
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <h1>Hola mundo</h1>
+            <div class="msj-container">
+
+                <div id="mensajes" class="row">
+            </div>
+
+            </div>
+            <form id="form">
+                <div class="form-group">
+                    <input type="text" id="nickemiter" placeholder="Mensaje..." style="margin-bottom: 1rem;" class="form-control">
+                    <textarea class="form-control" style="margin-bottom: 1rem;" id="messaje-emit" placeholder="Mensaje..." rows="3"></textarea>
+                    <input type="submit" class="btn btn-primary btn-lg d-block mx-auto" value="Enviar mensaje">
+                  </div>
+            </form>
+
+            
+
+        </div>
+    </div>
+
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
