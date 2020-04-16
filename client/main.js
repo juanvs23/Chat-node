@@ -29,6 +29,7 @@ document.getElementById('form').addEventListener('submit',(e)=>{
     };
     nickEmiter.style.display="none";
     socket.emit('addMsj',emitMessaje);
-    console.log(emitMessaje);
+    document.getElementById('numberjs').innerText=storyBoard.children.length+1;
+
 
 });
