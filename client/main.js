@@ -30,6 +30,20 @@ document.getElementById('form').addEventListener('submit',(e)=>{
     nickEmiter.style.display="none";
     socket.emit('addMsj',emitMessaje);
     document.getElementById('numberjs').innerText=storyBoard.children.length+1;
+   
 
 
 });
+document.addEventListener("DOMContentLoaded",function () {
+    console.log('hola');
+    fetch('https://api.ipify.org')
+    .then(function (resp) {
+        console.log(resp);
+        return resp.text()
+    })
+    .then(function(data){
+       document.getElementById('ip').innerText=data;
+       document.getElementById('numberjs').innerText=storyBoard.children.length+1;
+    })
+   
+})
